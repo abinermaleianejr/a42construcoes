@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A42Construcoes - Engenharia e Inovacao</title>
-    
+
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/themes.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="assets/icons/favicon.ico">
 </head>
+
 <body>
     <!-- Video Background -->
     <div class="video-background">
@@ -34,25 +38,29 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <span>A42Construcoes</span>
-                <small>Engenharia, Arquitura e Inovação</small>
+                <img src="assets/images/logo.png" alt="Logo A42Construcoes">
+                <div class="logo-text">
+                    <span>A42Construcoes</span>
+                    <small>Engenharia, Arquitetura e Inovação</small>
+                </div>
             </div>
-            
+
             <nav class="nav">
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#projects">Projetos</a></li>
+                    <li><a href="gallery.html">Galeria</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            
+
             <div class="header-actions">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
                     <i class="fas fa-moon"></i>
-                </button>
-                <a href="/budget.html" class="btn btn-primary">Orçamento Online</a>
+                </button> -->
+                <a href="budget.html" class="btn btn-primary">Orçamento Online</a>
                 <button class="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -64,334 +72,352 @@
     <section id="home" class="hero">
         <div class="container">
             <h1 class="hero-title">Construindo o Futuro com Excelência</h1>
-            <p class="hero-subtitle">Soluções inovadoras em engenharia civil para projetos residenciais, comerciais e industriais.</p>
+            <p class="hero-subtitle">Soluções inovadoras em engenharia civil para projetos residenciais, comerciais e
+                industriais.</p>
             <div class="hero-actions">
-                <button class="btn btn-primary">Nossos Projetos</button>
-                <button class="btn btn-secondary">Fale Conosco</button>
+                <a href="projects" class="btn btn-primary">Ver Nossos Projetos</a>
+
+                <a href="https://wa.me/+258853405441?text=Olá%2C%20venho%20pelo%20site%20da%20A42Construções"
+                    class="btn btn-secondary">Fale Conosco</a>
             </div>
         </div>
     </section>
-<!-- Project Budget Section -->
-<section id="budget" class="budget">
-    <div class="container">
-        <h2 class="section-title">Solicite Seu Orçamento</h2>
-        <p class="section-subtitle">Preencha os detalhes do seu projeto para receber uma proposta personalizada</p>
-        
-        <form id="budget-form" class="budget-form">
-            <!-- Basic Project Info -->
-            <div class="form-section">
-                <h3>Informações Básicas do Projeto</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="project-type">Tipo de Projeto*</label>
-                        <select id="project-type" name="project-type" required>
-                            <option value="">Selecione...</option>
-                            <option value="residential">Residencial</option>
-                            <option value="commercial">Comercial</option>
-                            <option value="industrial">Industrial</option>
-                            <option value="reform">Reforma</option>
-                            <option value="wall">Muro/Vedação</option>
-                            <option value="other">Outro</option>
+    <!-- Project Budget Section -->
+    <!-- <section id="budget" class="budget">
+        <div class="container">
+            <h2 class="section-title">Solicite Seu Orçamento</h2>
+            <p class="section-subtitle">Preencha os detalhes do seu projeto para receber uma proposta personalizada</p>
+
+            <form id="budget-form" class="budget-form">
+              
+                <div class="form-section">
+                    <h3>Informações Básicas do Projeto</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="project-type">Tipo de Projeto*</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Selecione...</option>
+                                <option value="residential">Residencial</option>
+                                <option value="commercial">Comercial</option>
+                                <option value="industrial">Industrial</option>
+                                <option value="reform">Reforma</option>
+                                <option value="wall">Muro/Vedação</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-category">Categoria Específica*</label>
+                            <select id="project-category" name="project-category" required>
+                                <option value="">Selecione o tipo primeiro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-area">Área Total (m²)*</label>
+                            <input type="number" id="project-area" name="project-area" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-location">Localização*</label>
+                            <input type="text" id="project-location" name="project-location" required>
+                        </div>
+                    </div>
+                </div>
+
+             
+                <div id="residential-fields" class="form-section dynamic-fields" style="display: none;">
+                    <h3>Detalhes Residenciais</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="rooms">Número de Quartos</label>
+                            <input type="number" id="rooms" name="rooms" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bathrooms">Número de Banheiros</label>
+                            <input type="number" id="bathrooms" name="bathrooms" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="floors">Número de Pavimentos</label>
+                            <input type="number" id="floors" name="floors" min="1" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="garage">Vagas de Garagem</label>
+                            <input type="number" id="garage" name="garage" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Serviços Desejados</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="project"> Projeto
+                                Arquitetônico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="structure"> Projeto Estrutural
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="electrical"> Projeto Elétrico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="hydraulic"> Projeto Hidráulico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="construction"> Construção
+                                Completa
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="foundation">
+                                Fundação/Assentamento
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="finishing"> Acabamentos
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="residential-services" value="other"> Outros
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+          
+                <div id="commercial-fields" class="form-section dynamic-fields" style="display: none;">
+                    <h3>Detalhes Comerciais</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="commercial-type">Tipo de Estabelecimento</label>
+                            <select id="commercial-type" name="commercial-type">
+                                <option value="">Selecione...</option>
+                                <option value="store">Loja/Comércio</option>
+                                <option value="office">Escritório</option>
+                                <option value="restaurant">Restaurante</option>
+                                <option value="hotel">Hotel/Pousada</option>
+                                <option value="medical">Clínica Médica</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="commercial-rooms">Número de Ambientes</label>
+                            <input type="number" id="commercial-rooms" name="commercial-rooms" min="1" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bathrooms-commercial">Número de Banheiros</label>
+                            <input type="number" id="bathrooms-commercial" name="bathrooms-commercial" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parking-spots">Vagas de Estacionamento</label>
+                            <input type="number" id="parking-spots" name="parking-spots" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Serviços Desejados</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="project"> Projeto Arquitetônico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="structure"> Projeto Estrutural
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="electrical"> Projeto Elétrico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="hydraulic"> Projeto Hidráulico
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="air-conditioning"> Projeto de
+                                Ar Condicionado
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="construction"> Construção
+                                Completa
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="reform"> Reforma
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="commercial-services" value="other"> Outros
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wall-fields" class="form-section dynamic-fields" style="display: none;">
+                    <h3>Detalhes do Muro/Vedação</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="wall-length">Comprimento Total (metros)*</label>
+                            <input type="number" id="wall-length" name="wall-length" min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wall-height">Altura (metros)*</label>
+                            <input type="number" id="wall-height" name="wall-height" min="1" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wall-type">Tipo de Muro*</label>
+                            <select id="wall-type" name="wall-type">
+                                <option value="">Selecione...</option>
+                                <option value="alvenaria">Alvenaria</option>
+                                <option value="drywall">Drywall</option>
+                                <option value="prefabricated">Pré-fabricado</option>
+                                <option value="wire">Tela/Alambrado</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wall-foundation">Tipo de Fundação</label>
+                            <select id="wall-foundation" name="wall-foundation">
+                                <option value="">Selecione...</option>
+                                <option value="direct">Direta no solo</option>
+                                <option value="shallow">Rasa</option>
+                                <option value="deep">Profunda</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Características Adicionais</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wall-features" value="electric-fence"> Cerca Elétrica
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wall-features" value="lighting"> Iluminação
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wall-features" value="security-system"> Sistema de
+                                Segurança
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wall-features" value="gate"> Portão
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wall-features" value="decoration"> Elementos Decorativos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+ 
+                <div class="form-section">
+                    <h3>Detalhes do Projeto</h3>
+                    <div class="form-group full-width">
+                        <label for="project-description">Descrição do Projeto*</label>
+                        <textarea id="project-description" name="project-description" rows="4" required
+                            placeholder="Descreva seu projeto com detalhes, incluindo necessidades específicas, preferências de materiais, estilo arquitetônico desejado, etc."></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="project-timeline">Prazo Desejado</label>
+                        <select id="project-timeline" name="project-timeline">
+                            <option value="">Sem prazo específico</option>
+                            <option value="3-months">3 meses</option>
+                            <option value="6-months">6 meses</option>
+                            <option value="1-year">1 ano</option>
+                            <option value="2-years">2 anos</option>
                         </select>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="project-category">Categoria Específica*</label>
-                        <select id="project-category" name="project-category" required>
-                            <option value="">Selecione o tipo primeiro</option>
+
+                    <div class="form-group full-width">
+                        <label for="budget-range">Faixa de Orçamento Prevista (Meticais)</label>
+                        <select id="budget-range" name="budget-range">
+                            <option value="">Prefiro não informar</option>
+                            <option value="under-500k">Até 500.000 MT</option>
+                            <option value="500k-1.5m">500.000 - 1.5 milhões MT</option>
+                            <option value="1.5m-3m">1.5 - 3 milhões MT</option>
+                            <option value="3m-6m">3 - 6 milhões MT</option>
+                            <option value="6m-12m">6 - 12 milhões MT</option>
+                            <option value="12m-20m">12 - 20 milhões MT</option>
+                            <option value="20m-35m">20 - 35 milhões MT</option>
+                            <option value="35m-50m">35 - 50 milhões MT</option>
+                            <option value="50m-75m">50 - 75 milhões MT</option>
+                            <option value="over-75m">Acima de 75 milhões MT</option>
                         </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project-area">Área Total (m²)*</label>
-                        <input type="number" id="project-area" name="project-area" min="1" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project-location">Localização*</label>
-                        <input type="text" id="project-location" name="project-location" required>
+                        <small class="form-text text-muted">
+                            Valores aproximados em meticais (MT). Câmbio referencial: 1 USD ≈ 64 MT
+                        </small>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Dynamic Residential Fields -->
-            <div id="residential-fields" class="form-section dynamic-fields" style="display: none;">
-                <h3>Detalhes Residenciais</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="rooms">Número de Quartos</label>
-                        <input type="number" id="rooms" name="rooms" min="0">
+
+                <div class="form-section">
+                    <h3>Materiais de Referência</h3>
+                    <div class="form-group full-width">
+                        <label>Envie arquivos de referência (fotos, plantas, esboços, etc.)</label>
+                        <div class="file-upload-area" id="file-upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Arraste e solte arquivos aqui ou clique para selecionar</p>
+                            <input type="file" id="reference-files" name="reference-files" multiple
+                                accept="image/*,.pdf,.doc,.docx,.dwg">
+                        </div>
+                        <div id="file-preview" class="file-preview"></div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="bathrooms">Número de Banheiros</label>
-                        <input type="number" id="bathrooms" name="bathrooms" min="0">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="floors">Número de Pavimentos</label>
-                        <input type="number" id="floors" name="floors" min="1" value="1">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="garage">Vagas de Garagem</label>
-                        <input type="number" id="garage" name="garage" min="0">
+
+                    <div class="form-group full-width">
+                        <label for="reference-links">Links de Referência (Pinterest, Instagram, etc.)</label>
+                        <input type="text" id="reference-links" name="reference-links"
+                            placeholder="Cole aqui links de referências que possam ajudar a entender seu estilo preferido">
                     </div>
                 </div>
-                
-                <div class="form-group full-width">
-                    <label>Serviços Desejados</label>
-                    <div class="checkbox-grid">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="project"> Projeto Arquitetônico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="structure"> Projeto Estrutural
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="electrical"> Projeto Elétrico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="hydraulic"> Projeto Hidráulico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="construction"> Construção Completa
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="foundation"> Fundação/Assentamento
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="finishing"> Acabamentos
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="residential-services" value="other"> Outros
-                        </label>
+
+         
+                <div class="form-section">
+                    <h3>Seus Dados</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="client-name">Nome Completo*</label>
+                            <input type="text" id="client-name" name="client-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-email">E-mail*</label>
+                            <input type="email" id="client-email" name="client-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-phone">Telefone*</label>
+                            <input type="tel" id="client-phone" name="client-phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-role">Você é o*</label>
+                            <select id="client-role" name="client-role" required>
+                                <option value="">Selecione...</option>
+                                <option value="owner">Proprietário</option>
+                                <option value="representative">Representante Legal</option>
+                                <option value="architect">Arquiteto</option>
+                                <option value="engineer">Engenheiro</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Dynamic Commercial Fields -->
-            <div id="commercial-fields" class="form-section dynamic-fields" style="display: none;">
-                <h3>Detalhes Comerciais</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="commercial-type">Tipo de Estabelecimento</label>
-                        <select id="commercial-type" name="commercial-type">
-                            <option value="">Selecione...</option>
-                            <option value="store">Loja/Comércio</option>
-                            <option value="office">Escritório</option>
-                            <option value="restaurant">Restaurante</option>
-                            <option value="hotel">Hotel/Pousada</option>
-                            <option value="medical">Clínica Médica</option>
-                            <option value="other">Outro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="commercial-rooms">Número de Ambientes</label>
-                        <input type="number" id="commercial-rooms" name="commercial-rooms" min="1" value="1">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="bathrooms-commercial">Número de Banheiros</label>
-                        <input type="number" id="bathrooms-commercial" name="bathrooms-commercial" min="0">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="parking-spots">Vagas de Estacionamento</label>
-                        <input type="number" id="parking-spots" name="parking-spots" min="0">
-                    </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary btn-large">Enviar Solicitação de Orçamento</button>
+                    <p class="form-notice">Ao enviar este formulário, você concorda com nossa <a href="#">Política de
+                            Privacidade</a>.</p>
                 </div>
-                
-                <div class="form-group full-width">
-                    <label>Serviços Desejados</label>
-                    <div class="checkbox-grid">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="project"> Projeto Arquitetônico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="structure"> Projeto Estrutural
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="electrical"> Projeto Elétrico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="hydraulic"> Projeto Hidráulico
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="air-conditioning"> Projeto de Ar Condicionado
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="construction"> Construção Completa
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="reform"> Reforma
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="commercial-services" value="other"> Outros
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Wall/Fence Fields -->
-            <div id="wall-fields" class="form-section dynamic-fields" style="display: none;">
-                <h3>Detalhes do Muro/Vedação</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="wall-length">Comprimento Total (metros)*</label>
-                        <input type="number" id="wall-length" name="wall-length" min="1">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="wall-height">Altura (metros)*</label>
-                        <input type="number" id="wall-height" name="wall-height" min="1" step="0.1">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="wall-type">Tipo de Muro*</label>
-                        <select id="wall-type" name="wall-type">
-                            <option value="">Selecione...</option>
-                            <option value="alvenaria">Alvenaria</option>
-                            <option value="drywall">Drywall</option>
-                            <option value="prefabricated">Pré-fabricado</option>
-                            <option value="wire">Tela/Alambrado</option>
-                            <option value="other">Outro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="wall-foundation">Tipo de Fundação</label>
-                        <select id="wall-foundation" name="wall-foundation">
-                            <option value="">Selecione...</option>
-                            <option value="direct">Direta no solo</option>
-                            <option value="shallow">Rasa</option>
-                            <option value="deep">Profunda</option>
-                            <option value="other">Outro</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label>Características Adicionais</label>
-                    <div class="checkbox-grid">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="wall-features" value="electric-fence"> Cerca Elétrica
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="wall-features" value="lighting"> Iluminação
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="wall-features" value="security-system"> Sistema de Segurança
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="wall-features" value="gate"> Portão
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="wall-features" value="decoration"> Elementos Decorativos
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project Details -->
-            <div class="form-section">
-                <h3>Detalhes do Projeto</h3>
-                <div class="form-group full-width">
-                    <label for="project-description">Descrição do Projeto*</label>
-                    <textarea id="project-description" name="project-description" rows="4" required placeholder="Descreva seu projeto com detalhes, incluindo necessidades específicas, preferências de materiais, estilo arquitetônico desejado, etc."></textarea>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="project-timeline">Prazo Desejado</label>
-                    <select id="project-timeline" name="project-timeline">
-                        <option value="">Sem prazo específico</option>
-                        <option value="3-months">3 meses</option>
-                        <option value="6-months">6 meses</option>
-                        <option value="1-year">1 ano</option>
-                        <option value="2-years">2 anos</option>
-                    </select>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="budget-range">Faixa de Orçamento Prevista</label>
-                    <select id="budget-range" name="budget-range">
-                        <option value="">Prefiro não informar</option>
-                        <option value="under-50k">Até R$ 50.000</option>
-                        <option value="50k-100k">R$ 50.000 - R$ 100.000</option>
-                        <option value="100k-250k">R$ 100.000 - R$ 250.000</option>
-                        <option value="250k-500k">R$ 250.000 - R$ 500.000</option>
-                        <option value="500k-1M">R$ 500.000 - R$ 1.000.000</option>
-                        <option value="over-1M">Acima de R$ 1.000.000</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Reference Materials -->
-            <div class="form-section">
-                <h3>Materiais de Referência</h3>
-                <div class="form-group full-width">
-                    <label>Envie arquivos de referência (fotos, plantas, esboços, etc.)</label>
-                    <div class="file-upload-area" id="file-upload-area">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>Arraste e solte arquivos aqui ou clique para selecionar</p>
-                        <input type="file" id="reference-files" name="reference-files" multiple accept="image/*,.pdf,.doc,.docx,.dwg">
-                    </div>
-                    <div id="file-preview" class="file-preview"></div>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="reference-links">Links de Referência (Pinterest, Instagram, etc.)</label>
-                    <input type="text" id="reference-links" name="reference-links" placeholder="Cole aqui links de referências que possam ajudar a entender seu estilo preferido">
-                </div>
-            </div>
-            
-            <!-- Client Info -->
-            <div class="form-section">
-                <h3>Seus Dados</h3>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="client-name">Nome Completo*</label>
-                        <input type="text" id="client-name" name="client-name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="client-email">E-mail*</label>
-                        <input type="email" id="client-email" name="client-email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="client-phone">Telefone*</label>
-                        <input type="tel" id="client-phone" name="client-phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="client-role">Você é o*</label>
-                        <select id="client-role" name="client-role" required>
-                            <option value="">Selecione...</option>
-                            <option value="owner">Proprietário</option>
-                            <option value="representative">Representante Legal</option>
-                            <option value="architect">Arquiteto</option>
-                            <option value="engineer">Engenheiro</option>
-                            <option value="other">Outro</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-submit">
-                <button type="submit" class="btn btn-primary btn-large">Enviar Solicitação de Orçamento</button>
-                <p class="form-notice">Ao enviar este formulário, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
-            </div>
-        </form>
-    </div>
-</section>
-    <!-- Services Section -->
+            </form>
+        </div>
+    </section> -->
+
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
             <p class="section-subtitle">Oferecemos soluções completas para sua obra</p>
-            
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -400,7 +426,7 @@
                     <h3>Projetos Arquitetônicos</h3>
                     <p>Desenvolvimento de projetos personalizados com foco em funcionalidade e estética.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-hard-hat"></i>
@@ -408,7 +434,7 @@
                     <h3>Construção Civil</h3>
                     <p>Execução de obras residenciais e comerciais com qualidade e dentro do prazo.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
@@ -416,7 +442,7 @@
                     <h3>Reformas</h3>
                     <p>Transformamos espaços com reformas planejadas e executadas por profissionais.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
@@ -427,60 +453,60 @@
             </div>
         </div>
     </section>
-    <!-- Project Budget Section -->
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projetos Recentes</h2>
-            <p class="section-subtitle">Algumas de nossas realizações</p>
-            
+            <h2 style="color: white;" class="section-title">Projetos Recentes</h2>
+            <p style="color: white;" class="section-subtitle">Algumas de nossas realizações</p>
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Residencial Green Valley">
+                        <img src="assets/images/p1/1758657693142.jpg" alt="Residência T2 - Bairro 1 de Maio">
                         <div class="project-overlay">
-                            <h3>Residencial Green Valley</h3>
+                            <h3>Residência T2 - Bairro 1 de Maio</h3>
                             <button class="btn btn-outline">Ver Detalhes</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Shopping Downtown">
+                        <img src="assets/images/p2/2.jpeg" alt="Residência T2 - Katembe">
                         <div class="project-overlay">
-                            <h3>Shopping Downtown</h3>
+                            <h3>Residência T2 - Katembe</h3>
                             <button class="btn btn-outline">Ver Detalhes</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="Condomínio Luxury">
+                        <img src="assets/images/p3/2.png" alt="Projecto Completo">
                         <div class="project-overlay">
-                            <h3>Condomínio Luxury</h3>
+                            <h3>Projecto Completo</h3>
                             <button class="btn btn-outline">Ver Detalhes</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center">
-                <button class="btn btn-primary">Ver Todos os Projetos</button>
+                <a href="projects" class="btn btn-primary">Ver Todos os Projetos</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <h2 class="section-title">25 Anos Construindo Sonhos</h2>
-                <p>A Construtec é referência em engenharia civil, com mais de duas décadas de experiência no mercado. Nossa equipe de profissionais altamente qualificados está comprometida em entregar obras de qualidade, dentro do prazo e orçamento estabelecidos.</p>
-                
-                <div class="about-stats">
+                <h2 class="section-title">Construindo Sonhos</h2>
+                <p>A A42Construções é referência em engenharia civil, com mais de duas décadas de experiência no
+                    mercado. Nossa equipe de profissionais altamente qualificados está comprometida em entregar obras de
+                    qualidade, dentro do prazo e orçamento estabelecidos.</p>
+
+                <!-- <div class="about-stats">
                     <div class="stat-item">
                         <span class="stat-number" data-count="150">0</span>
                         <span class="stat-label">Projetos Concluídos</span>
@@ -493,37 +519,40 @@
                         <span class="stat-number" data-count="50">0</span>
                         <span class="stat-label">Profissionais</span>
                     </div>
-                </div>
+                </div> -->
             </div>
-            
+
             <div class="about-image">
-                <img src="assets/images/about.jpg" alt="Equipe Construtec">
+                <img src="assets/images/about.jpg" alt="Equipe A42Construções">
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
-            
+
             <div class="testimonial-slider">
                 <div class="testimonial-slide active">
                     <div class="testimonial-content">
-                        <p>"A Construtec superou todas as nossas expectativas. O projeto foi entregue antes do prazo e com qualidade impecável."</p>
+                        <p>"A A42Construções fez um trabalho excelente na minha moradia na Sommerschield. Respeitaram o
+                            prazo e o orçamento, e a qualidade dos acabamentos superou o esperado. Recomendo sem
+                            reservas."</p>
                         <div class="testimonial-author">
-                            <img src="assets/images/client1.jpg" alt="Carlos Silva">
+
                             <div>
-                                <h4>Carlos Silva</h4>
-                                <span>Diretor, Silva & Associados</span>
+                                <h4>João Maria</h4>
+                                <span>Proprietário, Residência</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <p>"Profissionalismo e atenção aos detalhes fazem da Construtec nossa parceira preferida para todos os projetos."</p>
+                        <p>"Profissionalismo e atenção aos detalhes fazem da A42Construções nossa parceira preferida
+                            para todos os projetos."</p>
                         <div class="testimonial-author">
                             <img src="assets/images/client2.jpg" alt="Ana Oliveira">
                             <div>
@@ -533,10 +562,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <p>"Recomendo a Construtec pela transparência, competência e qualidade em todas as etapas da obra."</p>
+                        <p>"Recomendo a A42Construções pela transparência, competência e qualidade em todas as etapas da
+                            obra."</p>
                         <div class="testimonial-author">
                             <img src="assets/images/client3.jpg" alt="Roberto Mendes">
                             <div>
@@ -546,7 +576,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-controls">
                     <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
                     <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
@@ -555,36 +585,41 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-info">
-                <h2 class="section-title">Entre em Contato</h2>
-                <p>Estamos prontos para transformar sua visão em realidade. Entre em contato para discutir seu projeto.</p>
-                
+                <h2 style="color: antiquewhite;" class="section-title">Entre em Contato</h2>
+                <p style="color: antiquewhite;">Estamos prontos para transformar sua visão em realidade. Entre em
+                    contato para discutir seu projeto.
+                </p>
+
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Av. Engenheiro Eusébio Stevaux, 823 - São Paulo/SP</span>
+                        <span style="color: antiquewhite;">Matola, Maputo - 1114 / MP</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>(11) 1234-5678</span>
+                        <span style="color: antiquewhite;">(258) 85 340 5441</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>contato@construtec.com.br</span>
+                        <span style="color: antiquewhite;">contato@a42Construcoes.online</span>
+
                     </div>
                 </div>
-                
+
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/+258853405441?text=Olá%2C%20venho%20pelo%20site%20da%20A42Construções"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/tech4yoou2?locale=pt_BR"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/a42construcoes/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/dinismaleiane/"><i class="fab fa-linkedin-in"></i></a>  
                     <a href="#"><i class="fab fa-youtube"></i></a>
+
                 </div>
             </div>
-            
+
             <div class="contact-form">
                 <form>
                     <div class="form-group">
@@ -614,27 +649,28 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span>Construtec</span>
+                    <span>A42Construções</span>
                     <small>Engenharia Civil</small>
                     <p>Construindo sonhos, realizando projetos.</p>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3>Links Rápidos</h3>
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#services">Serviços</a></li>
-                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#projects.html">Projetos</a></li>
+                        <li><a href="gallery.html">Galeria</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-services">
                     <h3>Serviços</h3>
                     <ul>
@@ -645,7 +681,7 @@
                         <li><a href="#">Consultoria</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-newsletter">
                     <h3>Newsletter</h3>
                     <p>Assine nossa newsletter para receber novidades.</p>
@@ -655,9 +691,9 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2023 Construtec Engenharia Civil. Todos os direitos reservados.</p>
+                <p>&copy; 2026 A42Construções & Serviços. Todos os direitos reservados.</p>
                 <div class="footer-legal">
                     <a href="#">Política de Privacidade</a>
                     <a href="#">Termos de Uso</a>
@@ -675,4 +711,5 @@
     <script src="js/theme-switcher.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

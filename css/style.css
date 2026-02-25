@@ -181,22 +181,99 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-
+/* Logo Styles - Updated */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: white;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.header.scrolled .logo img {
+    height: 45px;
+}
+
+.logo-text {
     display: flex;
     flex-direction: column;
 }
 
-.logo small {
-    font-size: 0.8rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+.logo-text span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
 }
 
+.logo-text small {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+}
+
+/* Dark theme adjustment for logo */
+[data-theme="dark"] .header.scrolled .logo-text span,
+[data-theme="dark"] .header.scrolled .logo-text small {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .header.scrolled .logo-text small {
+    color: var(--text-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
+    
+    .logo-text span {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text small {
+        font-size: 0.6rem;
+        white-space: normal;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .logo-text span {
+        font-size: 1rem;
+    }
+    
+    .logo-text small {
+        font-size: 0.55rem;
+    }
+}
+
+/* Scrolled header styles */
+.header.scrolled .logo-text span {
+    color: var(--text-color);
+}
+
+.header.scrolled .logo-text small {
+    color: var(--text-light);
+}
 .nav ul {
     display: flex;
     gap: 30px;

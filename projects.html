@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - A42Construções e Serviços</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/construction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo A42Construcoes">
+                <div class="logo-text">
+                    <span>A42Construções</span>
+                    <small>Engenharia, Arquitetura e Inovação</small>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="projects.html" class="active">Projetos</a></li>
+                    <li><a href="gallery.html">Galeria</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html#budget" class="btn btn-primary">Orçamento</a>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="assets/images/projects-hero.jpg" alt="Nossos Projetos">
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <h1 class="page-hero-title">Nossos Projetos</h1>
+            <p class="page-hero-subtitle">Conheça o portfólio da A42Construções - Excelência em engenharia e arquitetura</p>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">Todos</button>
+                <button class="category-tab" data-category="residential">Residencial</button>
+                <button class="category-tab" data-category="commercial">Comercial</button>
+                <button class="category-tab" data-category="industrial">Industrial</button>
+                <button class="category-tab" data-category="infrastructure">Infraestrutura</button>
+                <button class="category-tab" data-category="reform">Reformas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-page">
+        <div class="container">
+            <!-- Featured Project -->
+            <div class="featured-project">
+                <div class="featured-project-image">
+                    <img src="assets/images/projects/featured-project.jpg" alt="Edifício Miramar">
+                    <div class="featured-project-badge">Destaque</div>
+                </div>
+                <div class="featured-project-content">
+                    <h2>Edifício Miramar</h2>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</p>
+                    <div class="project-meta">
+                        <span><i class="fas fa-ruler-combined"></i> 12.500 m²</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                        <span><i class="fas fa-tag"></i> Comercial / Residencial</span>
+                    </div>
+                    <p class="project-description">
+                        Edifício misto de 18 andares com conceito contemporâneo, integrando espaços comerciais no piso térreo e apartamentos de luxo nos andares superiores. Destaque para a fachada ventilada em vidro e alumínio, e o rooftop com piscina e área de lazer.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Diferenciais:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Certificação ambiental LEED</li>
+                            <li><i class="fas fa-check"></i> Sistema de energia solar</li>
+                            <li><i class="fas fa-check"></i> Automação residencial</li>
+                            <li><i class="fas fa-check"></i> Estrutura anti-sísmica</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary project-details-btn" data-project="miramar">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <!-- Projects Filter Bar -->
+            <div class="projects-filter-bar">
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="project-search" placeholder="Buscar projetos...">
+                </div>
+                <div class="filter-sort">
+                    <select id="project-sort">
+                        <option value="newest">Mais recentes</option>
+                        <option value="oldest">Mais antigos</option>
+                        <option value="name-asc">Nome (A-Z)</option>
+                        <option value="name-desc">Nome (Z-A)</option>
+                        <option value="area-desc">Maior área</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project 1 - Residencial -->
+                <div class="project-card" data-category="residential" data-year="2025" data-area="450" data-name="Vila dos Sonhos">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/residential-1.jpg" alt="Vila dos Sonhos">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="vila-sonhos"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Vila dos Sonhos</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Matola, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 450 m²</span>
+                            <span><i class="fas fa-bed"></i> 4 suites</span>
+                            <span><i class="fas fa-calendar"></i> 2025</span>
+                        </div>
+                        <p class="project-card-description">Residência contemporânea com conceito aberto, piscina e amplo jardim. Acabamentos de alto padrão e automação residencial.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Comercial -->
+                <div class="project-card" data-category="commercial" data-year="2024" data-area="3500" data-name="Centro Comercial 2000">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/commercial-1.jpg" alt="Centro Comercial 2000">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="centro-comercial"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Centro Comercial 2000</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 3.500 m²</span>
+                            <span><i class="fas fa-store"></i> 45 lojas</span>
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                        </div>
+                        <p class="project-card-description">Centro comercial moderno com praça de alimentação, cinema e amplo estacionamento. Estrutura metálica e fechamento em vidro.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Industrial -->
+                <div class="project-card" data-category="industrial" data-year="2024" data-area="8500" data-name="Galpão Industrial Matola">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/industrial-1.jpg" alt="Galpão Industrial Matola">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="galpao-matola"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Galpão Industrial Matola</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Matola, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 8.500 m²</span>
+                            <span><i class="fas fa-warehouse"></i> 5 docas</span>
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                        </div>
+                        <p class="project-card-description">Galpão logístico com pé direito duplo, sistema de combate a incêndio e escritórios administrativos integrados.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Infraestrutura -->
+                <div class="project-card" data-category="infrastructure" data-year="2023" data-area="15000" data-name="Ponte sobre o Rio Incomáti">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/infra-1.jpg" alt="Ponte sobre o Rio Incomáti">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="ponte-incomati"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Ponte sobre o Rio Incomáti</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 450 m</span>
+                            <span><i class="fas fa-road"></i> 4 vias</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                        <p class="project-card-description">Ponte estaiada com 450 metros de extensão, conectando duas regiões importantes. Estrutura em concreto protendido e cabos de aço.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Reforma -->
+                <div class="project-card" data-category="reform" data-year="2025" data-area="1200" data-name="Edifício Monumental">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/reform-1.jpg" alt="Edifício Monumental">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="monumental"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Edifício Monumental</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 1.200 m²</span>
+                            <span><i class="fas fa-building"></i> 8 andares</span>
+                            <span><i class="fas fa-calendar"></i> 2025</span>
+                        </div>
+                        <p class="project-card-description">Reforma completa de fachada e modernização das instalações de edifício histórico, preservando elementos arquitetônicos originais.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Residencial -->
+                <div class="project-card" data-category="residential" data-year="2023" data-area="280" data-name="Moradia Costa do Sol">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/residential-2.jpg" alt="Moradia Costa do Sol">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="costa-sol"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Moradia Costa do Sol</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Costa do Sol, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 280 m²</span>
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                        <p class="project-card-description">Casa de praia com conceito tropical, integrando áreas internas e externas. Piscina, deck e paisagismo nativo.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 7 - Comercial -->
+                <div class="project-card" data-category="commercial" data-year="2025" data-area="2200" data-name="Clínica Sommerschield">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/commercial-2.jpg" alt="Clínica Sommerschield">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="clinica"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Clínica Sommerschield</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 2.200 m²</span>
+                            <span><i class="fas fa-user-md"></i> 15 consultórios</span>
+                            <span><i class="fas fa-calendar"></i> 2025</span>
+                        </div>
+                        <p class="project-card-description">Centro médico com infraestrutura hospitalar, incluindo centro cirúrgico, leitos de internação e diagnóstico por imagem.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 8 - Industrial -->
+                <div class="project-card" data-category="industrial" data-year="2023" data-area="12000" data-name="Fábrica de Processamento">
+                    <div class="project-card-image">
+                        <img src="assets/images/projects/industrial-2.jpg" alt="Fábrica de Processamento">
+                        <div class="project-card-overlay">
+                            <div class="project-card-actions">
+                                <button class="btn-icon" title="Ver detalhes" data-project="fabrica"><i class="fas fa-search-plus"></i></button>
+                                <button class="btn-icon" title="Solicitar orçamento similar"><i class="fas fa-file-invoice"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Fábrica de Processamento</h3>
+                        <p class="project-location"><i class="fas fa-map-marker-alt"></i> Nacala, Moçambique</p>
+                        <div class="project-card-meta">
+                            <span><i class="fas fa-ruler-combined"></i> 12.000 m²</span>
+                            <span><i class="fas fa-industry"></i> Linha de produção</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                        <p class="project-card-description">Unidade industrial para processamento de alimentos, com câmaras frigoríficas, laboratórios e área administrativa.</p>
+                        <a href="#" class="project-card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="projects-load-more">
+                <button id="load-more-projects" class="btn btn-outline">Carregar mais projetos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="project-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Projetos Entregues</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-label">Prêmios</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="stat-number" data-count="80">0</div>
+                    <div class="stat-label">Profissionais</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Realize seu projeto com a A42Construções</h2>
+                <p>Nossa equipe está pronta para transformar sua visão em realidade</p>
+                <div class="cta-buttons">
+                    <a href="index.html#budget" class="btn btn-primary btn-large">Solicitar Orçamento</a>
+                    <a href="gallery.html" class="btn btn-secondary btn-large">Ver Galeria Completa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content modal-lg">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="project-modal-body">
+                <!-- Dynamic content loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-white.png" alt="A42Construções">
+                    <span>A42Construções e Serviços</span>
+                    <small>Engenharia, Arquitetura e Inovação</small>
+                    <p>Construindo sonhos, realizando projetos desde 2011.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#services">Serviços</a></li>
+                        <li><a href="projects.html">Projetos</a></li>
+                        <li><a href="gallery.html">Galeria</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Projetos Arquitetônicos</a></li>
+                        <li><a href="#">Construção Civil</a></li>
+                        <li><a href="#">Reformas</a></li>
+                        <li><a href="#">Regularização</a></li>
+                        <li><a href="#">Consultoria Técnica</a></li>
+                        <li><a href="#">Gestão de Obras</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contactos</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +258 84 000 0000</li>
+                        <li><i class="fas fa-envelope"></i> geral@a42construcoes.co.mz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. 24 de Julho, 123 - Maputo, Moçambique</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 A42Construções e Serviços, Lda. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+
+</html>

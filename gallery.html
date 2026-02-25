@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Projetos - A42Construcoes Engenharia</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header (mesmo da landing page) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>A42Construcoes</span>
+                    <small>Engenharia Civil</small>
+                </a>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="gallery.html" class="active">Projetos</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html#budget" class="btn btn-primary">Orçamento</a>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-bg">
+            <img src="assets/images/gallery-hero.jpg" alt="Nossos Projetos">
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <h1 class="gallery-hero-title">Nossa Galeria de Projetos</h1>
+            <p class="gallery-hero-subtitle">Conheça alguns dos nossos trabalhos realizados com excelência e dedicação</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="residential">Residencial</button>
+                <button class="filter-btn" data-filter="commercial">Comercial</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="reform">Reformas</button>
+                <button class="filter-btn" data-filter="infrastructure">Infraestrutura</button>
+            </div>
+            
+            <div class="filter-search">
+                <input type="text" id="gallery-search" placeholder="Buscar projetos...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Project 1 - Residential -->
+                <div class="gallery-item" data-category="residential" data-title="Residencial Green Valley">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/residential-1.jpg" alt="Residencial Green Valley">
+                        <div class="gallery-item-overlay">
+                            <h3>Residencial Green Valley</h3>
+                            <p>Casa contemporânea com 450m²</p>
+                            <div class="gallery-item-tags">
+                                <span>4 quartos</span>
+                                <span>Piscina</span>
+                                <span>Jardim</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="1">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Commercial -->
+                <div class="gallery-item" data-category="commercial" data-title="Shopping Downtown">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/commercial-1.jpg" alt="Shopping Downtown">
+                        <div class="gallery-item-overlay">
+                            <h3>Shopping Downtown</h3>
+                            <p>Centro comercial com 15.000m²</p>
+                            <div class="gallery-item-tags">
+                                <span>3 pavimentos</span>
+                                <span>120 lojas</span>
+                                <span>Praça alimentação</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="2">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Industrial -->
+                <div class="gallery-item" data-category="industrial" data-title="Galpão Logístico ABC">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/industrial-1.jpg" alt="Galpão Logístico ABC">
+                        <div class="gallery-item-overlay">
+                            <h3>Galpão Logístico ABC</h3>
+                            <p>Centro de distribuição com 8.000m²</p>
+                            <div class="gallery-item-tags">
+                                <span>Docas elevadas</span>
+                                <span>Pé direito 12m</span>
+                                <span>Escritórios</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="3">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Reform -->
+                <div class="gallery-item" data-category="reform" data-title="Edifício Imperial">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/reform-1.jpg" alt="Edifício Imperial">
+                        <div class="gallery-item-overlay">
+                            <h3>Edifício Imperial</h3>
+                            <p>Reforma completa de fachada</p>
+                            <div class="gallery-item-tags">
+                                <span>20 andares</span>
+                                <span>Revestimento</span>
+                                <span>Iluminação</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="4">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Infrastructure -->
+                <div class="gallery-item" data-category="infrastructure" data-title="Ponte Estaiada">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/infra-1.jpg" alt="Ponte Estaiada">
+                        <div class="gallery-item-overlay">
+                            <h3>Ponte Estaiada</h3>
+                            <p>Ponte com 450m de extensão</p>
+                            <div class="gallery-item-tags">
+                                <span>6 pistas</span>
+                                <span>Ciclovia</span>
+                                <span>Passarela</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="5">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Residential -->
+                <div class="gallery-item" data-category="residential" data-title="Condomínio Luxury">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/residential-2.jpg" alt="Condomínio Luxury">
+                        <div class="gallery-item-overlay">
+                            <h3>Condomínio Luxury</h3>
+                            <p>48 unidades de alto padrão</p>
+                            <div class="gallery-item-tags">
+                                <span>Suítes</span>
+                                <span>Academia</span>
+                                <span>Piscina</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="6">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 - Commercial -->
+                <div class="gallery-item" data-category="commercial" data-title="Torre Corporativa">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/commercial-2.jpg" alt="Torre Corporativa">
+                        <div class="gallery-item-overlay">
+                            <h3>Torre Corporativa</h3>
+                            <p>Edifício comercial com 25 andares</p>
+                            <div class="gallery-item-tags">
+                                <span>Heliponto</span>
+                                <span>Auditório</span>
+                                <span>Restaurante</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="7">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 - Industrial -->
+                <div class="gallery-item" data-category="industrial" data-title="Fábrica Tecnológica">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/industrial-2.jpg" alt="Fábrica Tecnológica">
+                        <div class="gallery-item-overlay">
+                            <h3>Fábrica Tecnológica</h3>
+                            <p>Planta industrial automatizada</p>
+                            <div class="gallery-item-tags">
+                                <span>Sala limpa</span>
+                                <span>Robótica</span>
+                                <span>Laboratórios</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="8">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 - Reform -->
+                <div class="gallery-item" data-category="reform" data-title="Restauro Histórico">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/reform-2.jpg" alt="Restauro Histórico">
+                        <div class="gallery-item-overlay">
+                            <h3>Restauro Histórico</h3>
+                            <p>Restauração de prédio tombado</p>
+                            <div class="gallery-item-tags">
+                                <span>Fachada</span>
+                                <span>Estrutura</span>
+                                <span>Acervo</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="9">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 - Infrastructure -->
+                <div class="gallery-item" data-category="infrastructure" data-title="Complexo Viário">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/infra-2.jpg" alt="Complexo Viário">
+                        <div class="gallery-item-overlay">
+                            <h3>Complexo Viário</h3>
+                            <p>Interseção com 3 níveis</p>
+                            <div class="gallery-item-tags">
+                                <span>Viadutos</span>
+                                <span>Túneis</span>
+                                <span>Paisagismo</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="10">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 - Residential -->
+                <div class="gallery-item" data-category="residential" data-title="Vila Contemporânea">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/residential-3.jpg" alt="Vila Contemporânea">
+                        <div class="gallery-item-overlay">
+                            <h3>Vila Contemporânea</h3>
+                            <p>Conjunto de 12 casas</p>
+                            <div class="gallery-item-tags">
+                                <span>Área de lazer</span>
+                                <span>Quadra</span>
+                                <span>Playground</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="11">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 - Commercial -->
+                <div class="gallery-item" data-category="commercial" data-title="Hotel Boutique">
+                    <div class="gallery-item-inner">
+                        <img src="assets/images/projects/commercial-3.jpg" alt="Hotel Boutique">
+                        <div class="gallery-item-overlay">
+                            <h3>Hotel Boutique</h3>
+                            <p>Hotel de luxo com 50 suítes</p>
+                            <div class="gallery-item-tags">
+                                <span>Spa</span>
+                                <span>Piscina</span>
+                                <span>Restaurante</span>
+                            </div>
+                            <button class="btn btn-outline view-project" data-project="12">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button id="load-more" class="btn btn-primary">Carregar Mais Projetos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <!-- <section class="gallery-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" data-count="250">250</div>
+                    <div class="stat-label">Projetos Entregues</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">15</div>
+                    <div class="stat-label">Prêmios</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="25">25</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">50</div>
+                    <div class="stat-label">Profissionais</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>A42Construcoes </span>
+                    <small>Engenharia Civil</small>
+                    <p>Construindo sonhos, realizando projetos.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#services">Serviços</a></li>
+                        <li><a href="gallery.html">Projetos</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Projetos Arquitetônicos</a></li>
+                        <li><a href="#">Construção Civil</a></li>
+                        <li><a href="#">Reformas</a></li>
+                        <li><a href="#">Regularização</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Assine nossa newsletter para receber novidades.</p>
+                    <form>
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 A42Construcoes Engenharia Civil. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
